@@ -11,16 +11,18 @@ export default function Home() {
         <section className="grid gap-10 lg:grid-cols-[2fr,1fr] lg:items-center">
           <div className="space-y-6">
             <p className="text-sm uppercase tracking-[0.3em] text-amber-600 dark:text-amber-400">
-              Buy it for life
+              Goodwright Supply — Bitcoin-friendly by design
             </p>
             <h1 className="text-4xl font-semibold leading-tight sm:text-5xl">
               Fewer things, better things.
             </h1>
             <p className="text-lg text-zinc-600 dark:text-zinc-300">
-              We hunt down durable, repairable goods built in the U.S. and
-              allied countries. Everything featured here is vetted for
-              provenance, warranty, and the people who make it.
+              We hunt down durable, repairable goods built in the U.S. and allied countries.
+              Everything featured here is vetted for provenance, warranty, ownership, and the people who make it.
             </p>
+            <div className="rounded-3xl border border-black/10 bg-white/70 p-4 text-sm text-zinc-600 shadow-sm dark:border-white/10 dark:bg-white/5 dark:text-zinc-300">
+              <strong className="font-semibold text-zinc-900 dark:text-white">Bitcoin-friendly:</strong> we accept BTC/Lightning for sourcing services, concierge buys, and future storefront launches. Tell us when you’re ready to pay in sats.
+            </div>
             <div className="flex flex-wrap gap-4">
               <Link
                 href="#featured"
@@ -41,59 +43,23 @@ export default function Home() {
               Field Notes
             </p>
             <p className="mt-3 text-2xl font-semibold">
-              Buying well is a vote: for craftsmanship, for maintenance, for
-              knowing who made your gear.
+              Buying well is a vote: for craftsmanship, for maintenance, for knowing who made your gear—and for paying them directly when possible.
             </p>
             <p className="mt-4 text-sm text-zinc-500 dark:text-zinc-400">
-              Weekly dispatch with new makers, repair tips, and one buy-it-for-life
-              teardown. Coming soon.
+              Weekly dispatch with new makers, repair tips, and one buy-it-for-life teardown. BTC-friendly concierge appointments opening soon.
             </p>
           </div>
         </section>
-
-        <section className="space-y-6" id="categories">
-          <div>
-            <p className="text-sm uppercase tracking-[0.3em] text-amber-600 dark:text-amber-400">
-              Categories
-            </p>
-            <h2 className="mt-2 text-3xl font-semibold">Where we start</h2>
-          </div>
-          <div className="grid gap-6 md:grid-cols-2">
-            {categories
-              .sort((a, b) => a.order - b.order)
-              .map((category) => (
-                <CategoryCard key={category.slug} category={category} />
-              ))}
-          </div>
-        </section>
-
-        <section className="space-y-6" id="featured">
-          <div>
-            <p className="text-sm uppercase tracking-[0.3em] text-amber-600 dark:text-amber-400">
-              Featured picks
-            </p>
-            <h2 className="mt-2 text-3xl font-semibold">Products that earn their keep</h2>
+@@
             <p className="text-sm text-zinc-500 dark:text-zinc-400">
               Affiliate links keep the lights on. We only recommend gear we
-              would hand to a friend.
+              would hand to a friend. Direct-from-maker buys are highlighted when available—and BTC/Lightning payments are welcome.
             </p>
           </div>
-          <div className="grid gap-6 md:grid-cols-2">
-            {products.slice(0, 4).map((product) => (
-              <ProductCard key={product.slug} product={product} />
-            ))}
-          </div>
-        </section>
-
-        <section className="rounded-3xl border border-black/5 bg-gradient-to-r from-zinc-900 to-black p-8 text-white dark:border-white/10">
-          <div className="space-y-3">
-            <p className="text-sm uppercase tracking-[0.3em] text-amber-400">
-              Newsletter
-            </p>
-            <h2 className="text-3xl font-semibold">The Dispatch (coming soon)</h2>
+@@
             <p className="text-sm text-white/70">
               Sign up to be first when we open subscriptions. Weekly field
-              reports, repair tutorials, and made-in-USA sourcing notes.
+              reports, repair tutorials, and made-in-USA sourcing notes. Early Bitcoin/Lightning booking links coming soon.
             </p>
           </div>
           <form className="mt-6 flex flex-col gap-3 sm:flex-row">
