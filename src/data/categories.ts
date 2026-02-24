@@ -5,7 +5,7 @@ export const categories: Category[] = [
     slug: "kitchen",
     title: "Home & Kitchen",
     manifesto:
-      "Tools built for daily use—carbon steel, copper, and hardwood that improve with age instead of wearing out.",
+      "Tools built for daily use—carbon steel, copper, hardwood, and borosilicate glass that improve with age instead of wearing out.",
     icon: "🥘",
     order: 1,
   },

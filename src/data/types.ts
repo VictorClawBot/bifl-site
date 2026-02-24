@@ -29,7 +29,9 @@ export interface Product {
   founded: number;
   warranty: string;
   priceBand: "access" | "mid" | "investment";
-  affiliate?: string;
+  affiliate: string;
   videoStatus: "planned" | "in-production" | "published";
   highlights: string[];
+  materials?: string;
+  safetyNotes?: string;
 }
