@@ -50,16 +50,51 @@ export default function Home() {
             </p>
           </div>
         </section>
-@@
+
+        <section className="space-y-6" id="categories">
+          <div>
+            <p className="text-sm uppercase tracking-[0.3em] text-amber-600 dark:text-amber-400">
+              Categories
+            </p>
+            <h2 className="mt-2 text-3xl font-semibold">Where we start</h2>
             <p className="text-sm text-zinc-500 dark:text-zinc-400">
-              Affiliate links keep the lights on. We only recommend gear we
-              would hand to a friend. Direct-from-maker buys are highlighted when available—and BTC/Lightning payments are welcome.
+              Four launch pillars: kitchen, tools, apparel, and carry. Every item gets checked for durability, repairability, origin, ownership, and warranty support.
             </p>
           </div>
-@@
+          <div className="grid gap-6 md:grid-cols-2">
+            {categories
+              .sort((a, b) => a.order - b.order)
+              .map((category) => (
+                <CategoryCard key={category.slug} category={category} />
+              ))}
+          </div>
+        </section>
+
+        <section className="space-y-6" id="featured">
+          <div>
+            <p className="text-sm uppercase tracking-[0.3em] text-amber-600 dark:text-amber-400">
+              Featured picks
+            </p>
+            <h2 className="mt-2 text-3xl font-semibold">Products that earn their keep</h2>
+            <p className="text-sm text-zinc-500 dark:text-zinc-400">
+              Affiliate links keep the lights on. We only recommend gear we would hand to a friend. Direct-from-maker buys are highlighted when available—and BTC/Lightning payments are welcome.
+            </p>
+          </div>
+          <div className="grid gap-6 md:grid-cols-2">
+            {products.slice(0, 4).map((product) => (
+              <ProductCard key={product.slug} product={product} />
+            ))}
+          </div>
+        </section>
+
+        <section className="rounded-3xl border border-black/5 bg-gradient-to-r from-zinc-900 to-black p-8 text-white dark:border-white/10">
+          <div className="space-y-3">
+            <p className="text-sm uppercase tracking-[0.3em] text-amber-400">
+              Newsletter
+            </p>
+            <h2 className="text-3xl font-semibold">The Dispatch (coming soon)</h2>
             <p className="text-sm text-white/70">
-              Sign up to be first when we open subscriptions. Weekly field
-              reports, repair tutorials, and made-in-USA sourcing notes. Early Bitcoin/Lightning booking links coming soon.
+              Sign up to be first when we open subscriptions. Weekly field reports, repair tutorials, and made-in-USA sourcing notes. Early Bitcoin/Lightning booking links coming soon.
             </p>
           </div>
           <form className="mt-6 flex flex-col gap-3 sm:flex-row">
